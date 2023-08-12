@@ -30,6 +30,7 @@ export const getPokemonById = createAsyncThunk(
   "pokemons/getPokemonById",
   async (id, { rejectWithValue }) => {
     try {
+      debugger;
       let url = `/pokemons/${id}`;
       const response = await apiService.get(url);
       if (!response.data) return rejectWithValue({ message: "No data" });
@@ -142,6 +143,7 @@ export const pokemonSlice = createSlice({
       }
     },
     [getPokemonById.fulfilled]: (state, action) => {
+      debugger;
       state.loading = false;
       state.pokemon = action.payload;
     },

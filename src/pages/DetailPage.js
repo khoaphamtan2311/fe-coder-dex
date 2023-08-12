@@ -65,7 +65,7 @@ export const DetailPage = () => {
                 fontWeight={700}
                 marginRight={1}
               >
-                #{("000" + (previousPokemon?.id || "000")).slice(-3)}
+                #{("000" + (previousPokemon?.id || "000")).slice(-4)}
               </Typography>
               <Typography
                 display={{ xs: "none", sm: "block" }}
@@ -106,7 +106,7 @@ export const DetailPage = () => {
                   : "Unknown"}
               </Typography>
               <Typography color="white" fontSize={24} fontWeight={700}>
-                #{("000" + (nextPokemon?.id || "000")).slice(-3)}
+                #{("000" + (nextPokemon?.id || "000")).slice(-4)}
               </Typography>
               <ArrowForwardIosIcon
                 sx={{
@@ -137,7 +137,7 @@ export const DetailPage = () => {
                 : "Unknown"}
             </Typography>
             <Typography variant="h4" display="inline" color="gray">
-              #{("000" + (pokemon?.id || "000")).slice(-3)}
+              #{("000" + (pokemon?.id || "000")).slice(-4)}
             </Typography>
           </Box>
         </Box>
